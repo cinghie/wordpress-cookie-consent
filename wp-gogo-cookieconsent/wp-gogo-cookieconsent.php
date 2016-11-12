@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Plugin Name: Gogodigital Cookie Consent
+ * Plugin Name: WP Gogo Cookie Consent
  * Plugin URI: http://www.gogodigital.it
  * Description: Adding Cookie Consent script to a Wordpress site
  * Author: Gogodigital S.r.l.s.
- * Version: 2.0.0
  * Author URI: http://www.gogodigital.it
- */
+ * Version: 2.0.1
+ **/
  
 if ( !defined( 'ABSPATH' ) ) {
 	header( 'Status: 403 Forbidden' );
@@ -36,10 +36,9 @@ class CookieConsentSettingsPage
      */
     public function add_plugin_page()
     {
-        // This page will be under "Settings"
         add_options_page(
             'Cookie Consent Settings Admin', 
-            'WP Cookie Consent', 
+            'WP Cookie Consent',
             'manage_options', 
             'cookie-consent-settings', 
             array( $this, 'create_admin_page' )
@@ -51,7 +50,6 @@ class CookieConsentSettingsPage
      */
     public function create_admin_page()
     {
-        // Set class property
         $this->options = get_option( 'cookieconsent_options' );
         ?>
         <div class="wrap">
@@ -59,7 +57,6 @@ class CookieConsentSettingsPage
 				<h1>WP Gogo Cookie Consent Settings</h1>
 				<form method="post" action="options.php">
 				<?php
-					// This prints out all hidden setting fields
 					settings_fields( 'cookieconsent_group' );
 					do_settings_sections( 'cookie-consent-settings' );
 					submit_button();
@@ -73,7 +70,7 @@ class CookieConsentSettingsPage
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 						<input type="hidden" name="cmd" value="_s-xclick">
 						<input type="hidden" name="hosted_button_id" value="TNGRD94CRZLVU">
-						<input type="image" src="https://www.paypalobjects.com/en_US/IT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<input type="image" src="https://www.paypalobjects.com/en_US/IT/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
 						<img alt="" border="0" src="https://www.paypalobjects.com/it_IT/i/scr/pixel.gif" width="1" height="1">
 					</form>
 				</div>
@@ -83,8 +80,10 @@ class CookieConsentSettingsPage
 					<li><a href="https://twitter.com/intent/tweet/?text=I+am+using+Wordpress+%22WP+GoGo+Cookie+Consent%22+plugin+to+show+simple+cookie+alert+message+on+my+WordPress+site.&amp" target="_blank">Tweet about this plugin</a></li>
 					<li><a href="http://wordpress.org/plugins/wp-gogo-cookie-consent/#compatibility" target="_blank">Vote "works" on the WordPress.org plugin page</a></li>
 				</ul>
-				<h3 class="ss-title">Looking for support?</h3>
+				<h3>Looking for support?</h3>
 				<p>Please use the <a href="#">plugin support forums</a> on WordPress.org.</p>
+                <h3>Who are Us?</h3>
+                <p><a href="http://www.gogodigital.it" target="_blank" title="Gogodigital Srls">Gogodigital Srls</a> is a young and innovative web agency that deals with Professional Web Sites for Companies and Persons, Responsive Web Sites, CMS Sites and Ecommerce Portals, Applications for Apple devices like iPhone, iPad, iPod, Applications for all Android devices like Samsung Smartphone and Pads, SEO Optimization, Web Marketing, Email Marketing and Social Media Marketing.</p>
 				<div style="clear: both"></div>
 			</div>
 			<div style="clear: both"></div>
@@ -153,8 +152,8 @@ class CookieConsentSettingsPage
 
     /**
      * Sanitize each setting field as needed
-     *
      * @param array $input Contains all settings fields as array keys
+     * @return array
      */
     public function sanitize( $input )
     {
@@ -325,7 +324,7 @@ add_action( 'wp_enqueue_scripts', 'add_cookieconsent_custom' );
  * Get Plugin URL
  * @return string
  */
-function wp_gogo_cookieconsent_get_plugin_url() 
+function wp_gogo_cookieconsent_get_plugin_url()
 {
     if ( !function_exists('plugins_url') )
 
@@ -333,5 +332,3 @@ function wp_gogo_cookieconsent_get_plugin_url()
 
     return plugins_url(plugin_basename(dirname(__FILE__)));
 }
-
-?>
