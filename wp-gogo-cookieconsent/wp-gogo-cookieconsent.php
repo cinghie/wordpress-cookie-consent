@@ -6,7 +6,7 @@
  * Description: Adding Cookie Consent script to a Wordpress site
  * Author: Gogodigital S.r.l.s.
  * Author URI: http://www.gogodigital.it
- * Version: 2.0.1
+ * Version: 2.0.2
  **/
  
 if ( !defined( 'ABSPATH' ) ) {
