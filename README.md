@@ -1,6 +1,8 @@
 # Gogodigital Cookie Consent for Wordpress
 
-Gogodigital Cookie Consent is a Wordpress Plugin to add Cookie Consent script to your Website: Cookie Consent is a wonderful script, allowing to show a warning for cookie policy. The original script is here: https://silktide.com/tools/cookie-consent/
+Gogodigital Cookie Consent is a Wordpress Plugin to add Cookie Consent script to your Website: Cookie Consent is a wonderful script, allowing to show a warning for cookie policy. 
+
+The original script is here: https://silktide.com/tools/cookie-consent/
 
 As the script from silktide.com, also the plugin is very simple to use
 
