@@ -300,7 +300,7 @@ function add_cookieconsent_custom()
 {
 	$cookieconsent_options = get_option('cookieconsent_options');
 	
-	$cookieCustom = 'window.cookieconsent_options = {
+	$cookieCustom = '<script type="text/javascript">window.cookieconsent_options = {
 		"theme": "'.$cookieconsent_options["theme"].'",
 		"message": "'.$cookieconsent_options["message"].'",
 		"dismiss": "'.$cookieconsent_options["dismiss_message"].'"';
@@ -311,14 +311,13 @@ function add_cookieconsent_custom()
 		"link": "'.$cookieconsent_options["privacy_link"].'"';
 	}		
 	
-	$cookieCustom .= '};';
-	
-   wp_enqueue_script( 'cookie-consent-custom-js', '/cookie-consent-custom.js', array(), '1.0' );
-   wp_add_inline_script( 'cookie-consent-custom-js', $cookieCustom );
+	$cookieCustom .= '};</script>';
+
+    echo $cookieCustom;
 }
 
 add_action( 'wp_enqueue_scripts', 'add_cookieconsent' );
-add_action( 'wp_enqueue_scripts', 'add_cookieconsent_custom' );
+add_action( 'wp_head', 'add_cookieconsent_custom' );
 
 /**
  * Get Plugin URL
