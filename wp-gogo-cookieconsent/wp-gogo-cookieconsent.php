@@ -206,37 +206,37 @@ class CookieConsentSettingsPage
 		if( $this->options['theme'] === 'dark-bottom' ) {
 			$select .= '<option value="dark-bottom" selected="selected">'.__('Dark Bottom','gogodigital-cookie-consent').'</option>';
 		} else {
-			$select .= '<option value="dark-bottom">Dark Bottom</option>';
+			$select .= '<option value="dark-bottom">'.__('Dark Bottom','gogodigital-cookie-consent').'</option>';
 		}
 		
 		if( $this->options['theme'] === 'dark-floating' ) {
 			$select .= '<option value="dark-floating" selected="selected">'.__('Dark Floating','gogodigital-cookie-consent').'</option>';
 		} else {
-			$select .= '<option value="dark-floating">Dark Floating</option>';
+			$select .= '<option value="dark-floating">'.__('Dark Floating','gogodigital-cookie-consent').'</option>';
 		}
 		
 		if( $this->options['theme'] === 'dark-top' ) {
 			$select .= '<option value="dark-top" selected="selected">'.__('Dark Top','gogodigital-cookie-consent').'</option>';
 		} else {
-			$select .= '<option value="dark-top">Dark Top</option>';
+			$select .= '<option value="dark-top">'.__('Dark Top','gogodigital-cookie-consent').'</option>';
 		}
 		
 		if( $this->options['theme'] === 'light-bottom' ) {
 			$select .= '<option value="light-bottom" selected="selected">'.__('Light Bottom','gogodigital-cookie-consent').'</option>';
 		} else {
-			$select .= '<option value="light-bottom">Light Bottom</option>';
+			$select .= '<option value="light-bottom">'.__('Light Bottom','gogodigital-cookie-consent').'</option>';
 		}
 		
 		if( $this->options['theme'] === 'light-floating' ) {
 			$select .= '<option value="light-floating" selected="selected">'.__('Light Floating','gogodigital-cookie-consent').'</option>';
 		} else {
-			$select .= '<option value="light-floating">Light Floating</option>';
+			$select .= '<option value="light-floating">'.__('Light Floating','gogodigital-cookie-consent').'</option>';
 		}
 		
 		if( $this->options['theme'] === 'light-top' ) {
 			$select .= '<option value="light-top" selected="selected">'.__('Light Top','gogodigital-cookie-consent').'</option>';
 		} else {
-			$select .= '<option value="light-top">Light Top</option>';
+			$select .= '<option value="light-top">'.__('Light Top','gogodigital-cookie-consent').'</option>';
 		}
 		
 		$select .= '</select>';
