@@ -55,7 +55,7 @@ class CookieConsentSettingsPage
         <div class="wrap">
 			<div style="border-right: 1px solid #ddd; float: left; padding-right: 2%;  width: 50%">
 				<h1>WP Gogo Cookie Consent Settings</h1>
-				<form method="post" action="options.php">
+				<form method="post" action="">
 				<?php
 					settings_fields( 'cookieconsent_group' );
 					do_settings_sections( 'cookie-consent-settings' );
@@ -152,27 +152,33 @@ class CookieConsentSettingsPage
 
     /**
      * Sanitize each setting field as needed
-     * @param array $input Contains all settings fields as array keys
+     *
+     * @param array $input
      * @return array
      */
     public function sanitize( $input )
     {
         $new_input = array();
 		
-		if( isset( $input['theme'] ) )
-            $new_input['theme'] = sanitize_text_field( $input['theme'] );
+		if( isset( $input['theme'] ) ) {
+			$new_input['theme'] = sanitize_text_field( $input['theme'] );
+        }
 		
-		if( isset( $input['message'] ) )
-            $new_input['message'] = sanitize_text_field( $input['message'] );
+		if( isset( $input['message'] ) ) {
+			$new_input['message'] = sanitize_text_field( $input['message'] );
+        }
 		
-        if( isset( $input['dismiss_message'] ) )
-            $new_input['dismiss_message'] = sanitize_text_field( $input['dismiss_message'] );
+        if( isset( $input['dismiss_message'] ) ) {
+	        $new_input['dismiss_message'] = sanitize_text_field( $input['dismiss_message'] );
+        }
 
-        if( isset( $input['learn_more_message'] ) )
-            $new_input['learn_more_message'] = sanitize_text_field( $input['learn_more_message'] );
+        if( isset( $input['learn_more_message'] ) ) {
+	        $new_input['learn_more_message'] = sanitize_text_field( $input['learn_more_message'] );
+        }
 		
-		if( isset( $input['privacy_link'] ) )
-            $new_input['privacy_link'] = sanitize_text_field( $input['privacy_link'] );
+		if( isset( $input['privacy_link'] ) ) {
+			$new_input['privacy_link'] = sanitize_text_field( $input['privacy_link'] );
+        }
 
         return $new_input;
     }
@@ -192,37 +198,37 @@ class CookieConsentSettingsPage
     {
 		$select  = '<select id="theme" name="cookieconsent_options[theme]" aria-describedby="timezone-description">';
 		
-		if($this->options['theme'] == "dark-bottom") {
+		if( $this->options['theme'] === 'dark-bottom' ) {
 			$select .= '<option value="dark-bottom" selected="selected">Dark Bottom</option>';
 		} else {
 			$select .= '<option value="dark-bottom">Dark Bottom</option>';
 		}
 		
-		if($this->options['theme'] == "dark-floating") {
+		if( $this->options['theme'] === 'dark-floating' ) {
 			$select .= '<option value="dark-floating" selected="selected">Dark Floating</option>';
 		} else {
 			$select .= '<option value="dark-floating">Dark Floating</option>';
 		}
 		
-		if($this->options['theme'] == "dark-top") {
+		if( $this->options['theme'] === 'dark-top' ) {
 			$select .= '<option value="dark-top" selected="selected">Dark Top</option>';
 		} else {
 			$select .= '<option value="dark-top">Dark Top</option>';
 		}
 		
-		if($this->options['theme'] == "light-bottom") {
+		if( $this->options['theme'] === 'light-bottom' ) {
 			$select .= '<option value="light-bottom" selected="selected">Light Bottom</option>';
 		} else {
 			$select .= '<option value="light-bottom">Light Bottom</option>';
 		}
 		
-		if($this->options['theme'] == "light-floating") {
+		if( $this->options['theme'] === 'light-floating' ) {
 			$select .= '<option value="light-floating" selected="selected">Light Floating</option>';
 		} else {
 			$select .= '<option value="light-floating">Light Floating</option>';
 		}
 		
-		if($this->options['theme'] == "light-top") {
+		if( $this->options['theme'] === 'light-top' ) {
 			$select .= '<option value="light-top" selected="selected">Light Top</option>';
 		} else {
 			$select .= '<option value="light-top">Light Top</option>';
@@ -285,7 +291,9 @@ class CookieConsentSettingsPage
  * Create Cookie Consent Settings Page
  */
 
-if( is_admin() ) $my_settings_page = new CookieConsentSettingsPage();
+if( is_admin() ) {
+	$my_settings_page = new CookieConsentSettingsPage();
+}
 
 /**
  * Adding Cookie Consent js
@@ -301,15 +309,15 @@ function add_cookieconsent_custom()
 	$cookieconsent_options = get_option('cookieconsent_options');
 	
 	$cookieCustom = '<script type="text/javascript">window.cookieconsent_options = {
-		"theme": "'.$cookieconsent_options["theme"].'",
-		"message": "'.$cookieconsent_options["message"].'",
-		"dismiss": "'.$cookieconsent_options["dismiss_message"].'"';
-		
-	if(isset($cookieconsent_options["privacy_link"]) && isset($cookieconsent_options["learn_more_message"])) {
+		"theme": "'.$cookieconsent_options['theme'] . '",
+		"message": "'.$cookieconsent_options['message'] . '",
+		"dismiss": "'.$cookieconsent_options['dismiss_message'] . '"';
+
+	if( isset($cookieconsent_options['privacy_link']) && isset($cookieconsent_options['learn_more_message'])) {
 		$cookieCustom .= ', 
-		"learnMore":"'.$cookieconsent_options["learn_more_message"].'", 
-		"link": "'.$cookieconsent_options["privacy_link"].'"';
-	}		
+		"learnMore":"'.$cookieconsent_options['learn_more_message'] . '", 
+		"link": "'.$cookieconsent_options['privacy_link'] . '"';
+	}
 	
 	$cookieCustom .= '};</script>';
 
@@ -325,9 +333,9 @@ add_action( 'wp_head', 'add_cookieconsent_custom' );
  */
 function wp_gogo_cookieconsent_get_plugin_url()
 {
-    if ( !function_exists('plugins_url') )
+    if ( !function_exists('plugins_url') ) {
+	    return get_option('siteurl') . '/wp-content/plugins/' . plugin_basename(__DIR__);
+    }
 
-        return get_option('siteurl') . '/wp-content/plugins/' . plugin_basename(dirname(__FILE__));
-
-    return plugins_url(plugin_basename(dirname(__FILE__)));
+    return plugins_url(plugin_basename(__DIR__));
 }
