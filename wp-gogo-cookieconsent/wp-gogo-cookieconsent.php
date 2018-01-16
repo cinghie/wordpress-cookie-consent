@@ -29,7 +29,12 @@ class CookieConsentSettingsPage
     {
         add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
         add_action( 'admin_init', array( $this, 'page_init' ) );
+        add_action( 'init', array( $this, 'load_textdomain' ) );
     }
+
+	public function load_textdomain() {
+		load_plugin_textdomain('gogodigital-cookie-consent', false, basename( __DIR__ ).'/lang' );
+	}
 
     /**
      * Add options page
@@ -199,37 +204,37 @@ class CookieConsentSettingsPage
 		$select  = '<select id="theme" name="cookieconsent_options[theme]" aria-describedby="timezone-description">';
 		
 		if( $this->options['theme'] === 'dark-bottom' ) {
-			$select .= '<option value="dark-bottom" selected="selected">Dark Bottom</option>';
+			$select .= '<option value="dark-bottom" selected="selected">'.__('Dark Bottom','gogodigital-cookie-consent').'</option>';
 		} else {
 			$select .= '<option value="dark-bottom">Dark Bottom</option>';
 		}
 		
 		if( $this->options['theme'] === 'dark-floating' ) {
-			$select .= '<option value="dark-floating" selected="selected">Dark Floating</option>';
+			$select .= '<option value="dark-floating" selected="selected">'.__('Dark Floating','gogodigital-cookie-consent').'</option>';
 		} else {
 			$select .= '<option value="dark-floating">Dark Floating</option>';
 		}
 		
 		if( $this->options['theme'] === 'dark-top' ) {
-			$select .= '<option value="dark-top" selected="selected">Dark Top</option>';
+			$select .= '<option value="dark-top" selected="selected">'.__('Dark Top','gogodigital-cookie-consent').'</option>';
 		} else {
 			$select .= '<option value="dark-top">Dark Top</option>';
 		}
 		
 		if( $this->options['theme'] === 'light-bottom' ) {
-			$select .= '<option value="light-bottom" selected="selected">Light Bottom</option>';
+			$select .= '<option value="light-bottom" selected="selected">'.__('Light Bottom','gogodigital-cookie-consent').'</option>';
 		} else {
 			$select .= '<option value="light-bottom">Light Bottom</option>';
 		}
 		
 		if( $this->options['theme'] === 'light-floating' ) {
-			$select .= '<option value="light-floating" selected="selected">Light Floating</option>';
+			$select .= '<option value="light-floating" selected="selected">'.__('Light Floating','gogodigital-cookie-consent').'</option>';
 		} else {
 			$select .= '<option value="light-floating">Light Floating</option>';
 		}
 		
 		if( $this->options['theme'] === 'light-top' ) {
-			$select .= '<option value="light-top" selected="selected">Light Top</option>';
+			$select .= '<option value="light-top" selected="selected">'.__('Light Top','gogodigital-cookie-consent').'</option>';
 		} else {
 			$select .= '<option value="light-top">Light Top</option>';
 		}
