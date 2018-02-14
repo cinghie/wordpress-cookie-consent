@@ -312,17 +312,20 @@ function add_cookieconsent()
 function add_cookieconsent_custom() 
 {
 	$cookieconsent_options = get_option('cookieconsent_options');
-	
-	$cookieCustom = '<script type="text/javascript">window.cookieconsent_options = {
-		"theme": "'.$cookieconsent_options['theme'] . '",
-		"message": "'.$cookieconsent_options['message'] . '",
-		"dismiss": "'.$cookieconsent_options['dismiss_message'] . '"';
+	$cookieconsent_dismiss = $cookieconsent_options["dismiss"] ? $cookieconsent_options["dismiss"] : 'Got It!';
+	$cookieconsent_message = $cookieconsent_options["message"] ? $cookieconsent_options["message"] : 'This website uses cookies to ensure you get the best experience on our website.';
+	$cookieconsent_theme   = $cookieconsent_options["theme"] ? $cookieconsent_options["theme"] : 'light-floating';
 
-	if( isset($cookieconsent_options['privacy_link']) && isset($cookieconsent_options['learn_more_message'])) {
+	$cookieCustom = '<script type="text/javascript">window.cookieconsent_options = {
+		"theme": "'.$cookieconsent_theme.'",
+		"message": "'.$cookieconsent_message.'",
+		"dismiss": "'.$cookieconsent_dismiss.'"';
+		
+	if(isset($cookieconsent_options["privacy_link"]) && isset($cookieconsent_options["learn_more_message"])) {
 		$cookieCustom .= ', 
-		"learnMore":"'.$cookieconsent_options['learn_more_message'] . '", 
-		"link": "'.$cookieconsent_options['privacy_link'] . '"';
-	}
+		"learnMore":"'.$cookieconsent_options["learn_more_message"].'", 
+		"link": "'.$cookieconsent_options["privacy_link"].'"';
+	}		
 	
 	$cookieCustom .= '};</script>';
 
