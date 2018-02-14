@@ -60,7 +60,7 @@ class CookieConsentSettingsPage
         <div class="wrap">
 			<div style="border-right: 1px solid #ddd; float: left; padding-right: 2%;  width: 50%">
 				<h1>WP Gogo Cookie Consent Settings</h1>
-				<form method="post" action="">
+				<form method="post" action="options.php">
 				<?php
 					settings_fields( 'cookieconsent_group' );
 					do_settings_sections( 'cookie-consent-settings' );
