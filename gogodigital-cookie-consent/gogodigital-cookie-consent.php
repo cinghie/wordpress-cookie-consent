@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Plugin Name: WP Gogo Cookie Consent
+ * Plugin Name: Gogodigital Cookie Consent
  * Plugin URI: http://www.gogodigital.it/development/estensioni/wordpress/wordpress-gogodigital-cookie-consent
  * Description: Adding Cookie Consent script to a Wordpress site
  * Author: Gogodigital S.r.l.s.
  * Author URI: http://www.gogodigital.it
- * Version: 2.0.2
+ * Version: 2.1.0
  **/
  
 if ( !defined( 'ABSPATH' ) ) {
