@@ -43,7 +43,7 @@ class CookieConsentSettingsPage
     {
         add_options_page(
             'Cookie Consent Settings Admin', 
-            'WP Cookie Consent',
+            'Cookie Consent',
             'manage_options', 
             'cookie-consent-settings', 
             array( $this, 'create_admin_page' )
