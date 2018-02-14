@@ -8,7 +8,11 @@
  * Author URI: http://www.gogodigital.it
  * Version: 2.1.0
  **/
- 
+
+define( 'GOGO_CC_VERSION', '2.1.0' );
+define( 'GOGO_CC_PATH', plugin_dir_path(__FILE__) );
+define( 'GOGO_CC_URL', plugin_dir_url(__FILE__) );
+
 if ( !defined( 'ABSPATH' ) ) {
 	header( 'Status: 403 Forbidden' );
 	header( 'HTTP/1.1 403 Forbidden' );
@@ -306,7 +310,7 @@ if( is_admin() ) {
 
 function add_cookieconsent() 
 {	
-	wp_enqueue_script( 'cookieconsent2-js', wp_gogo_cookieconsent_get_plugin_url(). '/js/cookieconsent.min.js', array(), '1.0.10', true );
+	wp_enqueue_script( 'cookieconsent2-js', gogodigital_cookie_consent_get_plugin_url(). '/js/cookieconsent.min.js', array(), '1.0.10', true );
 }
 
 function add_cookieconsent_custom() 
@@ -339,7 +343,7 @@ add_action( 'wp_head', 'add_cookieconsent_custom' );
  * Get Plugin URL
  * @return string
  */
-function wp_gogo_cookieconsent_get_plugin_url()
+function gogodigital_cookie_consent_get_plugin_url()
 {
     if ( !function_exists('plugins_url') ) {
 	    return get_option('siteurl') . '/wp-content/plugins/' . plugin_basename(__DIR__);
@@ -347,3 +351,21 @@ function wp_gogo_cookieconsent_get_plugin_url()
 
     return plugins_url(plugin_basename(__DIR__));
 }
+
+/**
+ * Settings Button on Plugins Panel
+ */
+function gogodigital_cookie_consentplugin_action_links($links, $file) {
+
+	static $this_plugin;
+	if ( ! $this_plugin ) $this_plugin = plugin_basename( __FILE__ );
+
+	if ( $file == $this_plugin ){
+		$settings_link = '<a href="options-general.php?page=cookie-consent-settings">' . __( 'Settings', 'gogodigital-cookie-consent' ) . '</a>';
+		array_unshift( $links, $settings_link );
+	}
+
+	return $links;
+
+}
+add_filter( 'plugin_action_links', 'gogodigital_cookie_consentplugin_action_links', 10, 2 );

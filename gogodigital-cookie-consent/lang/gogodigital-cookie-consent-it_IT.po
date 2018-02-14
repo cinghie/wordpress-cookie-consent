@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gogodigital Cookie Consent 2.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2018-02-14 08:02+0100\n"
+"POT-Creation-Date: 2018-02-14 11:32+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Gogodigital S.r.l.s. <info@gogodigital.it>\n"
 "Language-Team: Gogodigital S.r.l.s. <info@gogodigital.it>\n"
@@ -24,50 +24,54 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: gogodigital-cookie-consent.php:62
+#: gogodigital-cookie-consent.php:66
 msgid "Gogodigital Cookie Consent Settings"
 msgstr "Impostazione Gogodigital Cookie Consent"
 
-#: gogodigital-cookie-consent.php:119
+#: gogodigital-cookie-consent.php:123
 msgid "Theme"
 msgstr "Tema"
 
-#: gogodigital-cookie-consent.php:127
+#: gogodigital-cookie-consent.php:131
 msgid "Message"
 msgstr "Messaggio"
 
-#: gogodigital-cookie-consent.php:135
+#: gogodigital-cookie-consent.php:139
 msgid "Dismiss Message"
 msgstr "Messaggio di rimozione"
 
-#: gogodigital-cookie-consent.php:143
+#: gogodigital-cookie-consent.php:147
 msgid "Learn More Message"
-msgstr "Messaggio Leggi Tutto"
+msgstr "Messaggio leggi tutto"
 
-#: gogodigital-cookie-consent.php:151
+#: gogodigital-cookie-consent.php:155
 msgid "Privacy Link"
-msgstr "Link alla Privacy"
+msgstr "Link alla Cookie Policy"
 
-#: gogodigital-cookie-consent.php:207 gogodigital-cookie-consent.php:209
+#: gogodigital-cookie-consent.php:211 gogodigital-cookie-consent.php:213
 msgid "Dark Bottom"
-msgstr "Dark Bottom"
+msgstr "Scuro in basso"
 
-#: gogodigital-cookie-consent.php:213 gogodigital-cookie-consent.php:215
+#: gogodigital-cookie-consent.php:217 gogodigital-cookie-consent.php:219
 msgid "Dark Floating"
 msgstr "Scuro galleggiante"
 
-#: gogodigital-cookie-consent.php:219 gogodigital-cookie-consent.php:221
+#: gogodigital-cookie-consent.php:223 gogodigital-cookie-consent.php:225
 msgid "Dark Top"
 msgstr "Scuro in alto"
 
-#: gogodigital-cookie-consent.php:225 gogodigital-cookie-consent.php:227
+#: gogodigital-cookie-consent.php:229 gogodigital-cookie-consent.php:231
 msgid "Light Bottom"
 msgstr "Chiaro in basso"
 
-#: gogodigital-cookie-consent.php:231 gogodigital-cookie-consent.php:233
+#: gogodigital-cookie-consent.php:235 gogodigital-cookie-consent.php:237
 msgid "Light Floating"
 msgstr "Chiaro galleggiante"
 
-#: gogodigital-cookie-consent.php:237 gogodigital-cookie-consent.php:239
+#: gogodigital-cookie-consent.php:241 gogodigital-cookie-consent.php:243
 msgid "Light Top"
 msgstr "Chiaro in alto"
+
+#: gogodigital-cookie-consent.php:364
+msgid "Settings"
+msgstr "Impostazioni"
