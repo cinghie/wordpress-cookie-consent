@@ -59,7 +59,7 @@ class CookieConsentSettingsPage
         ?>
         <div class="wrap">
 			<div style="border-right: 1px solid #ddd; float: left; padding-right: 2%;  width: 50%">
-				<h1>Gogodigital Cookie Consent Settings</h1>
+				<h1><?php echo __('Gogodigital Cookie Consent Settings','gogodigital-cookie-consent') ?></h1>
 				<form method="post" action="options.php">
 				<?php
 					settings_fields( 'cookieconsent_group' );
@@ -116,7 +116,7 @@ class CookieConsentSettingsPage
 		
 		add_settings_field(
             'theme',  // ID
-            'Theme',  // Title 
+			__('Theme','gogodigital-cookie-consent'),  // Title
             array( $this, 'theme_callback' ),  // Callback
             'cookie-consent-settings',  // Page
             'setting_section_id' // Section  
@@ -124,7 +124,7 @@ class CookieConsentSettingsPage
 		
 		add_settings_field(
             'message',  // ID
-            'Message',  // Title 
+			__('Message','gogodigital-cookie-consent'),  // Title
             array( $this, 'message_callback' ),  // Callback
             'cookie-consent-settings',  // Page
             'setting_section_id' // Section  
@@ -132,7 +132,7 @@ class CookieConsentSettingsPage
 
         add_settings_field(
             'dismiss_message', // ID
-            'Dismiss Message', // Title 
+	        __('Dismiss Message','gogodigital-cookie-consent'), // Title
             array( $this, 'dismiss_message_callback' ), // Callback
             'cookie-consent-settings', // Page
             'setting_section_id' // Section           
@@ -140,7 +140,7 @@ class CookieConsentSettingsPage
 
         add_settings_field(
             'learn_more_message',  // ID
-            'Learn More Message',  // Title 
+	        __('Learn More Message','gogodigital-cookie-consent'),  // Title
             array( $this, 'learn_more_message_callback' ),  // Callback
             'cookie-consent-settings',  // Page
             'setting_section_id' // Section  
@@ -148,7 +148,7 @@ class CookieConsentSettingsPage
 		
 		add_settings_field(
             'privacy_link',  // ID
-            'Privacy Link',  // Title 
+			__('Privacy Link','gogodigital-cookie-consent'),  // Title
             array( $this, 'privacy_link_callback' ),  // Callback
             'cookie-consent-settings',  // Page
             'setting_section_id' // Section  

@@ -5,9 +5,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gogodigital Cookie Consent 2.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2018-02-14 07:45+0100\n"
+"POT-Creation-Date: 2018-02-14 08:02+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Your Name <you@example.com>\n"
+"Last-Translator: Gogodigital S.r.l.s. <info@gogodigital.it>\n"
 "Language-Team: Gogodigital S.r.l.s. <info@gogodigital.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -24,9 +24,33 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: gogodigital-cookie-consent.php:62
+msgid "Gogodigital Cookie Consent Settings"
+msgstr "Impostazione Gogodigital Cookie Consent"
+
+#: gogodigital-cookie-consent.php:119
+msgid "Theme"
+msgstr "Tema"
+
+#: gogodigital-cookie-consent.php:127
+msgid "Message"
+msgstr "Messaggio"
+
+#: gogodigital-cookie-consent.php:135
+msgid "Dismiss Message"
+msgstr "Messaggio di rimozione"
+
+#: gogodigital-cookie-consent.php:143
+msgid "Learn More Message"
+msgstr "Messaggio Leggi Tutto"
+
+#: gogodigital-cookie-consent.php:151
+msgid "Privacy Link"
+msgstr "Link alla Privacy"
+
 #: gogodigital-cookie-consent.php:207 gogodigital-cookie-consent.php:209
 msgid "Dark Bottom"
-msgstr "Scuro in basso"
+msgstr "Dark Bottom"
 
 #: gogodigital-cookie-consent.php:213 gogodigital-cookie-consent.php:215
 msgid "Dark Floating"
