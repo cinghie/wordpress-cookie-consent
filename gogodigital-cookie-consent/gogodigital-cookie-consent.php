@@ -355,7 +355,7 @@ function gogodigital_cookie_consent_get_plugin_url()
 /**
  * Settings Button on Plugins Panel
  */
-function gogodigital_cookie_consentplugin_action_links($links, $file) {
+function gogodigital_cookie_consent_plugin_action_links($links, $file) {
 
 	static $this_plugin;
 	if ( ! $this_plugin ) $this_plugin = plugin_basename( __FILE__ );
@@ -368,4 +368,4 @@ function gogodigital_cookie_consentplugin_action_links($links, $file) {
 	return $links;
 
 }
-add_filter( 'plugin_action_links', 'gogodigital_cookie_consentplugin_action_links', 10, 2 );
+add_filter( 'plugin_action_links', 'gogodigital_cookie_consent_plugin_action_links', 10, 2 );
