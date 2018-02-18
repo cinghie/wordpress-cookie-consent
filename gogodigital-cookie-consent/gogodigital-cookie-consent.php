@@ -8,7 +8,7 @@
  * Author URI: http://www.gogodigital.it
  * Version: 2.1.0
  **/
-
+ 
 define( 'GOGO_CC_VERSION', '2.1.0' );
 define( 'GOGO_CC_PATH', plugin_dir_path(__FILE__) );
 define( 'GOGO_CC_URL', plugin_dir_url(__FILE__) );
@@ -25,7 +25,7 @@ class CookieConsentSettingsPage
      * Holds the values to be used in the fields callbacks
      */
     private $options;
-
+	
     /**
      * Start up
      */
@@ -35,11 +35,11 @@ class CookieConsentSettingsPage
         add_action( 'admin_init', array( $this, 'page_init' ) );
         add_action( 'init', array( $this, 'load_textdomain' ) );
     }
-
+	
 	public function load_textdomain() {
 		load_plugin_textdomain('gogodigital-cookie-consent', false, basename( __DIR__ ).'/lang' );
 	}
-
+	
     /**
      * Add options page
      */
@@ -53,7 +53,7 @@ class CookieConsentSettingsPage
             array( $this, 'create_admin_page' )
         );
     }
-
+	
     /**
      * Options page callback
      */
@@ -99,7 +99,7 @@ class CookieConsentSettingsPage
         </div>
         <?php
     }
-
+	
     /**
      * Register and add settings
      */
@@ -110,7 +110,7 @@ class CookieConsentSettingsPage
             'cookieconsent_options', // Option name
             array( $this, 'sanitize' ) // Sanitize
         );
-
+		
         add_settings_section(
             'setting_section_id', // ID
             '', // Title
@@ -133,7 +133,7 @@ class CookieConsentSettingsPage
             'cookie-consent-settings',  // Page
             'setting_section_id' // Section  
         );     
-
+		
         add_settings_field(
             'dismiss_message', // ID
 	        __('Dismiss Message','gogodigital-cookie-consent'), // Title
@@ -141,7 +141,7 @@ class CookieConsentSettingsPage
             'cookie-consent-settings', // Page
             'setting_section_id' // Section           
         );      
-
+		
         add_settings_field(
             'learn_more_message',  // ID
 	        __('Learn More Message','gogodigital-cookie-consent'),  // Title
@@ -158,7 +158,7 @@ class CookieConsentSettingsPage
             'setting_section_id' // Section  
         );      
     }
-
+	
     /**
      * Sanitize each setting field as needed
      *
@@ -180,7 +180,6 @@ class CookieConsentSettingsPage
         if( isset( $input['dismiss_message'] ) ) {
 	        $new_input['dismiss_message'] = sanitize_text_field( $input['dismiss_message'] );
         }
-
         if( isset( $input['learn_more_message'] ) ) {
 	        $new_input['learn_more_message'] = sanitize_text_field( $input['learn_more_message'] );
         }
@@ -188,10 +187,10 @@ class CookieConsentSettingsPage
 		if( isset( $input['privacy_link'] ) ) {
 			$new_input['privacy_link'] = sanitize_text_field( $input['privacy_link'] );
         }
-
+		
         return $new_input;
     }
-
+	
     /** 
      * Print the Section text
      */
@@ -261,7 +260,7 @@ class CookieConsentSettingsPage
             isset( $this->options['message'] ) ? esc_attr( $this->options['message']) : ''
         );
     }
-
+	
     /** 
      * Get the settings option array and print one of its values
      */
@@ -272,7 +271,7 @@ class CookieConsentSettingsPage
             isset( $this->options['dismiss_message'] ) ? esc_attr( $this->options['dismiss_message']) : ''
         );
     }
-
+	
     /** 
      * Get the settings option array and print one of its values
      */
@@ -295,11 +294,9 @@ class CookieConsentSettingsPage
         );
     }
 }
-
 /*
  * Create Cookie Consent Settings Page
  */
-
 if( is_admin() ) {
 	$my_settings_page = new CookieConsentSettingsPage();
 }
@@ -307,7 +304,6 @@ if( is_admin() ) {
 /**
  * Adding Cookie Consent js
  */
-
 function add_cookieconsent() 
 {	
 	wp_enqueue_script( 'cookieconsent2-js', gogodigital_cookie_consent_get_plugin_url(). '/assets/js/cookieconsent.min.js', array(), '2.0.0', true );
@@ -319,7 +315,6 @@ function add_cookieconsent_custom()
 	$cookieconsent_dismiss = $cookieconsent_options["dismiss_message"] ? $cookieconsent_options["dismiss_message"] : 'Got It!';
 	$cookieconsent_message = $cookieconsent_options["message"] ? $cookieconsent_options["message"] : 'This website uses cookies to ensure you get the best experience on our website.';
 	$cookieconsent_theme   = $cookieconsent_options["theme"] ? $cookieconsent_options["theme"] : 'light-floating';
-
 	$cookieCustom = '<script type="text/javascript">window.cookieconsent_options = {
 		"theme": "'.$cookieconsent_theme.'",
 		"message": "'.$cookieconsent_message.'",
@@ -332,7 +327,6 @@ function add_cookieconsent_custom()
 	}		
 	
 	$cookieCustom .= '};</script>';
-
     echo $cookieCustom;
 }
 
@@ -348,7 +342,6 @@ function gogodigital_cookie_consent_get_plugin_url()
     if ( !function_exists('plugins_url') ) {
 	    return get_option('siteurl') . '/wp-content/plugins/' . plugin_basename(__DIR__);
     }
-
     return plugins_url(plugin_basename(__DIR__));
 }
 
@@ -356,16 +349,12 @@ function gogodigital_cookie_consent_get_plugin_url()
  * Settings Button on Plugins Panel
  */
 function gogodigital_cookie_consent_plugin_action_links($links, $file) {
-
 	static $this_plugin;
 	if ( ! $this_plugin ) $this_plugin = plugin_basename( __FILE__ );
-
 	if ( $file == $this_plugin ){
 		$settings_link = '<a href="options-general.php?page=cookie-consent-settings">' . __( 'Settings', 'gogodigital-cookie-consent' ) . '</a>';
 		array_unshift( $links, $settings_link );
 	}
-
 	return $links;
-
 }
 add_filter( 'plugin_action_links', 'gogodigital_cookie_consent_plugin_action_links', 10, 2 );
