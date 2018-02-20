@@ -10,7 +10,7 @@
  * Text Domain: gogodigital-cookie-consent
  **/
  
-define( 'GOGO_CC_VERSION', '2.1.0' );
+define( 'GOGO_CC_VERSION', '2.1.1' );
 define( 'GOGO_CC_PATH', plugin_dir_path(__FILE__) );
 define( 'GOGO_CC_URL', plugin_dir_url(__FILE__) );
 
