@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gogodigital Cookie Consent 2.1.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2018-02-21 00:14+0100\n"
+"POT-Creation-Date: 2018-02-21 00:26+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Gogodigital S.r.l.s. <info@gogodigital.it>\n"
 "Language-Team: Gogodigital S.r.l.s. <info@gogodigital.it>\n"
@@ -23,55 +23,55 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: gogodigital-cookie-consent.php:66
+#: gogodigital-cookie-consent.php:67
 msgid "Gogodigital Cookie Consent Settings"
 msgstr "Impostazione Gogodigital Cookie Consent"
 
-#: gogodigital-cookie-consent.php:103
+#: gogodigital-cookie-consent.php:104
 msgid "Theme"
 msgstr "Tema"
 
-#: gogodigital-cookie-consent.php:111
+#: gogodigital-cookie-consent.php:112
 msgid "Message"
 msgstr "Messaggio"
 
-#: gogodigital-cookie-consent.php:119
+#: gogodigital-cookie-consent.php:120
 msgid "Dismiss Message"
 msgstr "Messaggio di rimozione"
 
-#: gogodigital-cookie-consent.php:127
+#: gogodigital-cookie-consent.php:128
 msgid "Learn More Message"
 msgstr "Messaggio leggi tutto"
 
-#: gogodigital-cookie-consent.php:135
+#: gogodigital-cookie-consent.php:136
 msgid "Privacy Link"
 msgstr "Link alla Cookie Policy"
 
-#: gogodigital-cookie-consent.php:190 gogodigital-cookie-consent.php:192
+#: gogodigital-cookie-consent.php:191 gogodigital-cookie-consent.php:193
 msgid "Dark Bottom"
 msgstr "Scuro in basso"
 
-#: gogodigital-cookie-consent.php:196 gogodigital-cookie-consent.php:198
+#: gogodigital-cookie-consent.php:197 gogodigital-cookie-consent.php:199
 msgid "Dark Floating"
 msgstr "Scuro galleggiante"
 
-#: gogodigital-cookie-consent.php:202 gogodigital-cookie-consent.php:204
+#: gogodigital-cookie-consent.php:203 gogodigital-cookie-consent.php:205
 msgid "Dark Top"
 msgstr "Scuro in alto"
 
-#: gogodigital-cookie-consent.php:208 gogodigital-cookie-consent.php:210
+#: gogodigital-cookie-consent.php:209 gogodigital-cookie-consent.php:211
 msgid "Light Bottom"
 msgstr "Chiaro in basso"
 
-#: gogodigital-cookie-consent.php:214 gogodigital-cookie-consent.php:216
+#: gogodigital-cookie-consent.php:215 gogodigital-cookie-consent.php:217
 msgid "Light Floating"
 msgstr "Chiaro galleggiante"
 
-#: gogodigital-cookie-consent.php:220 gogodigital-cookie-consent.php:222
+#: gogodigital-cookie-consent.php:221 gogodigital-cookie-consent.php:223
 msgid "Light Top"
 msgstr "Chiaro in alto"
 
-#: gogodigital-cookie-consent.php:335
+#: gogodigital-cookie-consent.php:336
 msgid "Settings"
 msgstr "Impostazioni"
 
@@ -109,10 +109,11 @@ msgstr "Hai bisogno di aiuto?"
 #: sidebar.php:30
 msgid ""
 "Please use the <a href=\"https://wordpress.org/support/plugin/gogodigital-"
-"cookie-consent\">plugin support forums</a> on WordPress.org"
+"cookie-consent\" target=\"_blank\">plugin support forums</a> on WordPress.org"
 msgstr ""
 "Puoi utilizzare <a href=\"https://wordpress.org/support/plugin/gogodigital-"
-"cookie-consent\">il forum di supporto del plugin</a> su WordPress.org"
+"cookie-consent\" target=\"_blank\">il forum di supporto del plugin</a> su "
+"WordPress.org"
 
 #: sidebar.php:31
 msgid "Who are Us?"

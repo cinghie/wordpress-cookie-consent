@@ -27,7 +27,7 @@
     </li>
 </ul>
 <h3><?php echo __('Looking for support?','gogodigital-cookie-consent') ?></h3>
-<p><?php echo __('Please use the <a href="https://wordpress.org/support/plugin/gogodigital-cookie-consent">plugin support forums</a> on WordPress.org','gogodigital-cookie-consent') ?>.</p>
+<p><?php echo __('Please use the <a href="https://wordpress.org/support/plugin/gogodigital-cookie-consent" target="_blank">plugin support forums</a> on WordPress.org','gogodigital-cookie-consent') ?>.</p>
 <h3><?php echo __('Who are Us?','gogodigital-cookie-consent') ?></h3>
 <p>
     <a href="http://www.gogodigital.it" target="_blank" title="Gogodigital Srls">Gogodigital S.r.l.s.</a>
