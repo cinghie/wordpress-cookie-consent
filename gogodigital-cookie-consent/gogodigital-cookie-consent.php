@@ -287,7 +287,7 @@ if( is_admin() ) {
  */
 function add_cookieconsent() 
 {	
-	wp_enqueue_script( 'cookieconsent2-js', gogodigital_cookie_consent_get_plugin_url(). '/assets/js/cookieconsent.min.js', array(), '2.0.0', true );
+	wp_enqueue_script( 'cookieconsent2-js', gogodigital_cookie_consent_get_plugin_url(). '/assets/2.0.0/js/cookieconsent.min.js', array(), '2.0.0', true );
 }
 
 function add_cookieconsent_custom() 
