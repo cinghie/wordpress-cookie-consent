@@ -1,4 +1,4 @@
-<h3 style="margin-top: 2em;"><?php echo __('Donate $5, $10 or $20','gogodigital-cookie-consent') ?></h3>
+<h3 style="margin-top: 2em;"><?php echo __('Donate €5, €10 or €20','gogodigital-cookie-consent') ?></h3>
 <p><?php echo __('If you like this plugin, consider supporting us donating the time to develop it','gogodigital-cookie-consent') ?></p>
 <div>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
