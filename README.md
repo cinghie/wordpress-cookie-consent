@@ -6,6 +6,14 @@ The original script is here: https://silktide.com/tools/cookie-consent/
 
 As the script from silktide.com, also the plugin is very simple to use
 
+## Copy folder with git from Terminal
+
+Go to folder wp-content/plugins/
+
+```
+git clone https://github.com/cinghie/wordpress-gogo-cookieconsent.git gogodigital-customization
+```
+
 ## Parameters
 
 ### theme
