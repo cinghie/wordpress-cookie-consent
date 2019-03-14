@@ -11,7 +11,7 @@ As the script from silktide.com, also the plugin is very simple to use
 Go to folder wp-content/plugins/
 
 ```
-git clone https://github.com/cinghie/wordpress-gogo-cookieconsent.git gogodigital-customization
+git clone https://github.com/cinghie/wordpress-gogo-cookieconsent.git gogodigital-cookieconsent
 ```
 
 ## Parameters
